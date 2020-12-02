@@ -2,15 +2,42 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
+			
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom",
+				// "navigationBarTitleText": "威店云助手",
+				"app-plus": {
+					"titleNView": false,
+					"scrollIndicator": "none"
+				}
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "威店云助手",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	}
+	},
+	"subpackages": [
+	    {
+	      "root": "packageA",
+		  "name": "packageA",
+	      "pages": [
+				{
+					"path":  "pages/index/index",
+					"style": { }
+				} 
+	      ]
+	    },{
+	      "root": "packageB",
+	      "name": "packageB",
+	      "pages": [
+				{
+					"path":  "pages/index/index",
+					"style": { } 
+				} 
+	      ]
+	    }
+	]
 }
